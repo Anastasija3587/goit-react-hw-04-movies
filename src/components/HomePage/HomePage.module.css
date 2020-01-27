@@ -1,0 +1,26 @@
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0 50px 50px 50px;
+}
+
+.item {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.item:last-child {
+  margin-bottom: 0;
+}
+
+.itemsFilm:hover {
+  display: block;
+  color: rgb(158, 131, 255);
+  transform: scaleY(1.2);
+}
+
+.itemsFilm {
+  text-decoration: none;
+  color: rgb(16, 47, 97);
+
+}

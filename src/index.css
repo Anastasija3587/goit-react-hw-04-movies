@@ -1,0 +1,11 @@
+#root {
+  width: 80%;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.829);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('https://naked-science.ru/wp-content/uploads/2018/04/field_image_istock-516189065.jpg');
+}

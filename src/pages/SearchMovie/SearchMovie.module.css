@@ -1,0 +1,26 @@
+.btn {
+  width: 145px;
+  padding: 10px 0;
+  font-size: 20px;
+  font-family: 'Merienda', cursive;
+  border: 1px solid rgb(69, 57, 230);
+  box-shadow: 0 0 10px rgba(64, 55, 187, 0.712);
+  border-radius: 45%;
+  color: rgb(64, 55, 187);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.input {
+  width: 250px;
+  padding: 10px 0;
+  margin-right: 30px;
+  background: rgba(255, 255, 255, 0.5);
+  ;
+  font-size: 15px;
+  font-family: 'Merienda', cursive;
+  padding-left: 10px;
+}
+
+.form {
+  padding: 10px 0 10px 10px;
+}

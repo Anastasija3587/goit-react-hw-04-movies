@@ -1,0 +1,22 @@
+.list {
+  margin-top: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  background: rgb(255, 255, 255);
+  padding-top: 20px;
+}
+
+.list img {
+  width: 300px;
+  height: 450px;
+}
+
+.item {
+  margin-right: 30px;
+
+}
+
+.item:nth-child(4n) {
+  margin-right: 0;
+}
