@@ -4,19 +4,18 @@
   display: flex;
   flex-wrap: wrap;
   background: rgb(255, 255, 255);
-  padding-top: 20px;
+  padding: 20px 0 0 80px;
 }
 
-.list img {
+.blockImg {
   width: 300px;
   height: 450px;
+  background-image: url('https://sdmg.com/wp-content/uploads/2017/04/picture-not-available.jpg?x70576');
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .item {
-  margin-right: 30px;
+  margin-right: 40px;
 
-}
-
-.item:nth-child(4n) {
-  margin-right: 0;
 }

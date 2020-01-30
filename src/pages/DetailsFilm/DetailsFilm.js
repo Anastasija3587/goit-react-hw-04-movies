@@ -35,15 +35,19 @@ class DetailsFilm extends Component {
 
   componentDidMount() {
     const { match } = this.props;
-    API.fetchById(match.params.movieID).then(res =>
-      this.setState({
-        imgUrl: res.poster_path,
-        title: res.title,
-        overview: res.overview,
-        vote: res.vote_average,
-        genres: res.genres,
-      }),
-    );
+    API.fetchById(match.params.movieID)
+      .then(res =>
+        this.setState({
+          imgUrl: res.poster_path,
+          title: res.title,
+          overview: res.overview,
+          vote: res.vote_average,
+          genres: res.genres,
+        }),
+      )
+      .catch(err => {
+        throw new Error(err);
+      });
   }
 
   goBack = () => {

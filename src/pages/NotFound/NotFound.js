@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const NotFound = () => (
   <h1 style={{ textAlign: 'center' }}>
@@ -6,6 +7,7 @@ const NotFound = () => (
     <span role="img" aria-label="emoji">
       🤔
     </span>
+    <Link to="/">Lets Home page!</Link>
   </h1>
 );
 

@@ -7,7 +7,6 @@
     "@testing-library/react": "^9.3.3",
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.19.1",
-    "gh-pages": "^2.1.1",
     "normalize.css": "^8.0.1",
     "query-string": "^6.10.1",
     "react": "^16.12.0",
@@ -20,9 +19,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"

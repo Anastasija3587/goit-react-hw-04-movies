@@ -20,7 +20,11 @@ class SearchMovie extends Component {
     const { location } = this.props;
     const qsSearch = qs.parse(location.search).query;
     if (qsSearch) {
-      API.fetching(qsSearch).then(res => this.setState({ items: res.results }));
+      API.fetching(qsSearch)
+        .then(res => this.setState({ items: res.results }))
+        .catch(err => {
+          throw new Error(err);
+        });
     }
   }
 
@@ -36,7 +40,11 @@ class SearchMovie extends Component {
       ...location,
       search: `?query=${value}`,
     });
-    API.fetching(value).then(res => this.setState({ items: res.results }));
+    API.fetching(value)
+      .then(res => this.setState({ items: res.results }))
+      .catch(err => {
+        throw new Error(err);
+      });
     this.setState({ value: '' });
   };
 

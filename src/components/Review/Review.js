@@ -14,9 +14,11 @@ class Review extends Component {
 
   componentDidMount() {
     const { match } = this.props;
-    API.fetchingReview(match.params.movieID).then(res =>
-      this.setState({ review: res.results }),
-    );
+    API.fetchingReview(match.params.movieID)
+      .then(res => this.setState({ review: res.results }))
+      .catch(err => {
+        throw new Error(err);
+      });
   }
 
   render() {

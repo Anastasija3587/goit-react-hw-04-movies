@@ -9,9 +9,13 @@ class HomePage extends Component {
   };
 
   componentDidMount() {
-    API.fetchingTrandingMovies().then(res => {
-      this.setState({ items: res.results });
-    });
+    API.fetchingTrandingMovies()
+      .then(res => {
+        this.setState({ items: res.results });
+      })
+      .catch(err => {
+        throw new Error(err);
+      });
   }
 
   render() {

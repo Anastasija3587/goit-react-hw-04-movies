@@ -14,9 +14,11 @@ class Cast extends Component {
 
   componentDidMount() {
     const { match } = this.props;
-    API.fetchingCast(match.params.movieID).then(res =>
-      this.setState({ cast: res.cast }),
-    );
+    API.fetchingCast(match.params.movieID)
+      .then(res => this.setState({ cast: res.cast }))
+      .catch(err => {
+        throw new Error(err);
+      });
   }
 
   render() {
@@ -25,10 +27,9 @@ class Cast extends Component {
       <ul className={styles.list}>
         {cast.map(c => (
           <li className={styles.item} key={c.id}>
-            <img
-              src={`https://image.tmdb.org/t/p/w300/${c.profile_path}`}
-              alt=""
-            />
+            <div className={styles.blockImg}>
+              <img src={`${API.BASE_URL_IMG}/${c.profile_path}`} alt="" />
+            </div>
             <p>{c.name}</p>
             <p>Character: {c.character}</p>
           </li>
